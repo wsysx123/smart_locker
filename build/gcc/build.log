@@ -1,0 +1,180 @@
+In file included from custom/main.c:74:0:
+cloud/protocol/mqtt/inc/mqtt.h:52:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+ void MQTT_Ping();
+ ^
+cloud/protocol/mqtt/inc/mqtt.h:59:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+ void getusername();
+ ^
+cloud/protocol/mqtt/inc/mqtt.h:62:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+ void gettopicid();
+ ^
+custom/main.c:232:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+ u8 devlink();
+ ^
+custom/main.c: In function 'proc_main_task':
+custom/main.c:239:9: warning: unused variable 'ret' [-Wunused-variable]
+     s32 ret;
+         ^
+custom/main.c: In function 'CallBack_UART_Hdlr':
+custom/main.c:300:16: warning: pointer targets in passing argument 1 of 'proc_handle' differ in signedness [-Wpointer-sign]
+                proc_handle(m_RxBuf_Uart,sizeof(m_RxBuf_Uart));
+                ^
+custom/main.c:230:13: note: expected 'char *' but argument is of type 'u8 *'
+ static void proc_handle(char *pData,s32 len);
+             ^
+custom/main.c: In function 'proc_handle':
+custom/main.c:349:9: warning: pointer targets in passing argument 1 of 'Analyse_Command' differ in signedness [-Wpointer-sign]
+         if (Analyse_Command(pData, 1, '>', m_apn))
+         ^
+custom/main.c:228:12: note: expected 'u8 *' but argument is of type 'char *'
+ extern s32 Analyse_Command(u8* src_str,s32 symbol_num,u8 symbol, u8* dest_buf);
+            ^
+custom/main.c:355:9: warning: pointer targets in passing argument 1 of 'Analyse_Command' differ in signedness [-Wpointer-sign]
+         if (Analyse_Command(pData, 2, '>', m_userid))
+         ^
+custom/main.c:228:12: note: expected 'u8 *' but argument is of type 'char *'
+ extern s32 Analyse_Command(u8* src_str,s32 symbol_num,u8 symbol, u8* dest_buf);
+            ^
+custom/main.c:361:9: warning: pointer targets in passing argument 1 of 'Analyse_Command' differ in signedness [-Wpointer-sign]
+         if (Analyse_Command(pData, 3, '>', m_passwd))
+         ^
+custom/main.c:228:12: note: expected 'u8 *' but argument is of type 'char *'
+ extern s32 Analyse_Command(u8* src_str,s32 symbol_num,u8 symbol, u8* dest_buf);
+            ^
+custom/main.c:377:9: warning: pointer targets in passing argument 1 of 'Analyse_Command' differ in signedness [-Wpointer-sign]
+         if (Analyse_Command(pData, 1, '>', m_SrvADDR))
+         ^
+custom/main.c:228:12: note: expected 'u8 *' but argument is of type 'char *'
+ extern s32 Analyse_Command(u8* src_str,s32 symbol_num,u8 symbol, u8* dest_buf);
+            ^
+custom/main.c:383:9: warning: pointer targets in passing argument 1 of 'Analyse_Command' differ in signedness [-Wpointer-sign]
+         if (Analyse_Command(pData, 2, '>', srvport))
+         ^
+custom/main.c:228:12: note: expected 'u8 *' but argument is of type 'char *'
+ extern s32 Analyse_Command(u8* src_str,s32 symbol_num,u8 symbol, u8* dest_buf);
+            ^
+custom/main.c:388:9: warning: pointer targets in passing argument 1 of 'Ql_atoi' differ in signedness [-Wpointer-sign]
+         m_SrvPort = Ql_atoi(srvport);
+         ^
+In file included from custom/main.c:58:0:
+include/ql_stdlib.h:41:8: note: expected 'const char *' but argument is of type 'u8 *'
+ s32    Ql_atoi(const char* s);
+        ^
+custom/main.c:398:19: warning: pointer targets in assignment differ in signedness [-Wpointer-sign]
+     m_pCurrentPos = m_send_buf;
+                   ^
+custom/main.c:341:9: warning: unused variable 'iret' [-Wunused-variable]
+     s32 iret;
+         ^
+custom/main.c: In function 'Callback_Timer':
+custom/main.c:492:17: warning: pointer targets in passing argument 1 of 'Ql_strcpy' differ in signedness [-Wpointer-sign]
+                 Ql_strcpy(m_gprsCfg.apnName, m_apn);
+                 ^
+In file included from custom/main.c:58:0:
+include/ql_stdlib.h:47:7: note: expected 'char *' but argument is of type 'u8 *'
+ char* Ql_strcpy(char* dest, const char* src);
+       ^
+custom/main.c:492:17: warning: pointer targets in passing argument 2 of 'Ql_strcpy' differ in signedness [-Wpointer-sign]
+                 Ql_strcpy(m_gprsCfg.apnName, m_apn);
+                 ^
+In file included from custom/main.c:58:0:
+include/ql_stdlib.h:47:7: note: expected 'const char *' but argument is of type 'u8 *'
+ char* Ql_strcpy(char* dest, const char* src);
+       ^
+custom/main.c:493:17: warning: pointer targets in passing argument 1 of 'Ql_strcpy' differ in signedness [-Wpointer-sign]
+                 Ql_strcpy(m_gprsCfg.apnUserId, m_userid);
+                 ^
+In file included from custom/main.c:58:0:
+include/ql_stdlib.h:47:7: note: expected 'char *' but argument is of type 'u8 *'
+ char* Ql_strcpy(char* dest, const char* src);
+       ^
+custom/main.c:493:17: warning: pointer targets in passing argument 2 of 'Ql_strcpy' differ in signedness [-Wpointer-sign]
+                 Ql_strcpy(m_gprsCfg.apnUserId, m_userid);
+                 ^
+In file included from custom/main.c:58:0:
+include/ql_stdlib.h:47:7: note: expected 'const char *' but argument is of type 'u8 *'
+ char* Ql_strcpy(char* dest, const char* src);
+       ^
+custom/main.c:494:17: warning: pointer targets in passing argument 1 of 'Ql_strcpy' differ in signedness [-Wpointer-sign]
+                 Ql_strcpy(m_gprsCfg.apnPasswd, m_passwd);
+                 ^
+In file included from custom/main.c:58:0:
+include/ql_stdlib.h:47:7: note: expected 'char *' but argument is of type 'u8 *'
+ char* Ql_strcpy(char* dest, const char* src);
+       ^
+custom/main.c:494:17: warning: pointer targets in passing argument 2 of 'Ql_strcpy' differ in signedness [-Wpointer-sign]
+                 Ql_strcpy(m_gprsCfg.apnPasswd, m_passwd);
+                 ^
+In file included from custom/main.c:58:0:
+include/ql_stdlib.h:47:7: note: expected 'const char *' but argument is of type 'u8 *'
+ char* Ql_strcpy(char* dest, const char* src);
+       ^
+custom/main.c:667:17: warning: pointer targets in passing argument 1 of 'Ql_strlen' differ in signedness [-Wpointer-sign]
+                 if (!Ql_strlen(m_send_buf))//no data need to send
+                 ^
+In file included from custom/main.c:58:0:
+include/ql_stdlib.h:54:7: note: expected 'const char *' but argument is of type 'u8 *'
+ u32   Ql_strlen(const char* str);
+       ^
+custom/main.c:674:21: warning: pointer targets in passing argument 2 of 'Ql_SOC_Send' differ in signedness [-Wpointer-sign]
+                     ret = Ql_SOC_Send(m_socketid, m_pCurrentPos, m_remain_len);
+                     ^
+In file included from custom/main.c:66:0:
+include/ql_socket.h:265:7: note: expected 'u8 *' but argument is of type 'char *'
+ s32   Ql_SOC_Send(s32 socketId, u8* pData, s32 dataLen);
+       ^
+custom/main.c: In function 'callback_socket_write':
+custom/main.c:923:9: warning: pointer targets in passing argument 2 of 'Ql_SOC_Send' differ in signedness [-Wpointer-sign]
+         ret = Ql_SOC_Send(m_socketid, m_pCurrentPos, m_remain_len);
+         ^
+In file included from custom/main.c:66:0:
+include/ql_socket.h:265:7: note: expected 'u8 *' but argument is of type 'char *'
+ s32   Ql_SOC_Send(s32 socketId, u8* pData, s32 dataLen);
+       ^
+custom/main.c: At top level:
+custom/main.c:982:4: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+ u8 devlink(){
+    ^
+custom/main.c: In function 'devlink':
+custom/main.c:988:3: warning: implicit declaration of function 'RIL_GetIMEI' [-Wimplicit-function-declaration]
+   RIL_GetIMEI(strtmp);
+   ^
+custom/main.c:100:19: warning: pointer targets in assignment differ in signedness [-Wpointer-sign]
+     m_pCurrentPos = m_send_buf;\
+                   ^
+custom/main.c:999:3: note: in expansion of macro 'send2server'
+   send2server(mqttbuf._data,mqttbuf._len);
+   ^
+custom/main.c: In function 'Callback_MQTT_Timer':
+custom/main.c:1038:5: warning: passing argument 1 of 'MQTT_Subscribe' from incompatible pointer type [enabled by default]
+     MQTT_Subscribe(topics,1);
+     ^
+In file included from custom/main.c:74:0:
+cloud/protocol/mqtt/inc/mqtt.h:53:6: note: expected 'const char **' but argument is of type 'char (*)[50]'
+ void MQTT_Subscribe(const char *topics[], unsigned char topic_cnt);
+      ^
+custom/main.c:1056:5: warning: pointer targets in passing argument 2 of 'packet' differ in signedness [-Wpointer-sign]
+     packet(packetlen,packetdata);
+     ^
+In file included from custom/main.c:74:0:
+cloud/protocol/mqtt/inc/mqtt.h:57:6: note: expected 'char *' but argument is of type 'unsigned char *'
+ void packet(u32,char*);
+      ^
+custom/main.c:1059:5: warning: pointer targets in passing argument 2 of 'MQTT_Publish' differ in signedness [-Wpointer-sign]
+     MQTT_Publish(topics[0],publish,publishlen);
+     ^
+In file included from custom/main.c:74:0:
+cloud/protocol/mqtt/inc/mqtt.h:54:6: note: expected 'const char *' but argument is of type 'unsigned char *'
+ void MQTT_Publish(const char *topic, const char *msg,u32 len);
+      ^
+custom/main.c:1067:6: warning: pointer targets in passing argument 2 of 'MQTT_Publish' differ in signedness [-Wpointer-sign]
+      MQTT_Publish(topics[0],lastpublish,lastpublishlen);
+      ^
+In file included from custom/main.c:74:0:
+cloud/protocol/mqtt/inc/mqtt.h:54:6: note: expected 'const char *' but argument is of type 'unsigned char *'
+ void MQTT_Publish(const char *topic, const char *msg,u32 len);
+      ^
+custom/main.c: In function 'callback_socket_write':
+custom/main.c:907:11: warning: 'ret' may be used uninitialized in this function [-Wmaybe-uninitialized]
+         if(ret == SOC_BEARER_FAIL)  
+           ^
