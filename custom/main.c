@@ -982,7 +982,7 @@ void CallBack_GPRS_Deactived(u8 contextId, s32 errCode, void* customParam )
 u8 devlink(){
 	char strtmp[50];
 	buffer_init(&mqttbuf);
-		APP_DEBUG("<--buffer init ok.-->\r\n");
+		APP_DEBUG("<--buffer init ok。.-->\r\n");
 	//	send2server("\1\2\3",3);
 		Ql_memset(strtmp,0,50);
 		RIL_GetIMEI(strtmp);
